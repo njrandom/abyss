@@ -1,37 +1,133 @@
-## Welcome to GitHub Pages
+ <!doctype html><html lang="en"><head> 
+  <meta charset="UTF-8"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous"> 
+  <title>NJ Random </title> 
+ <style type="text/css" id="dcoder_stylesheet">@import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
+*{
+    box-sizing: border-box;
+}
+body{
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Muli', sans-serif;
+    overflow-x: hidden;
+}
+.logo{
+    width:150px;
+}
+.text{
+    text-transform: uppercase;
+}
+.nav-btn{
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    font-size: 20px;
+}
+.open-btn{
+    position: fixed;
+    top: 10px;
+    left: 10px;
+}
+.nav{
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    transform: translateX(-100%);
+    transition: transform .9s ease-in-out;
+}
+.nav.visible{
+    transform: translateX(0);
+    transition: transform .6s ease-in-out;
+}
+.nav-black{
+    background-color: rgb(34, 31, 31);
+    width: 60%;
+    max-width: 480px;
+    min-width: 320px;
+    transition-delay: 0.4s ;
+}
+.nav-black.visible{
+    transition-delay: 0s;
+}
+.nav-red{
+    width: 95%;
+    background-color: rgb(229, 9, 20);
+    transition-delay: 0.2s;
+}
+.nav-red.visible{
+    transition-delay: 0.2s;
+}
+.nav-white{
+    width: 95%;
+    background-color: #fff;
+    padding: 40px;
+    position: relative;
+    transition-delay: 0s;
+}
+.nav-white.visible{
+    transition-delay: 0.4s;
+}
+.close-btn{
+    position: absolute;
+    top: 40px;
+    right: 30px;
+    opacity: 0.3;
+}
+.list{
+    list-style-type: none;
+    padding: 0;
+}
+.list li{
+    margin: 20px 0;
+}
+.list li a{
+    color: rgb(34, 31, 31);
+    font-size: 14px;
+    text-decoration: none;
+    text-transform: uppercase;
+}
 
-You can use the [editor on GitHub](https://github.com/njrandom/abyss/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
+.nested-list{
+    list-style-type: none;
+    padding-left:20px ;
+}</style></head> 
+ <body> 
+  <button class="nav-btn open-btn"> <i class="fas fa-bars"></i> </button> 
+  <img src="https://logos-download.com/wp-content/uploads/2018/09/Mortal_Combat_Logo.png " alt="logo" class="logo"> 
+  <p class="text">WELCOME</p> 
+  <div class="nav nav-black"> 
+   <div class="nav nav-red"> 
+    <div class="nav nav-white"> 
+     <button class="nav-btn close-btn"> <i class="fas fa-times"></i> </button> 
+     <img src="https://logos-download.com/wp-content/uploads/2019/07/The_Evil_Within_Logo.png" alt="logo" class="logo"> 
+     <ul class="nav-ul list"> 
+      <li><a href="#">Telegram</a></li> 
+      <li><a href="#">Instagram</a></li> 
+      <li><a href="#">Youtube</a></li>  
+      <li><a href="#">Team Immortals</a></li> 
+     </ul> 
+    </div> 
+   </div> 
+  </div> 
+ 
+<script type="text/javascript" id="dcoder_script">window.addEventListener('load', () =>{
+const openBtn = document.querySelector('.open-btn');
+const closeBtn = document.querySelector('.close-btn');
+const navs = document.querySelectorAll('.nav');
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+openBtn.addEventListener('click', () => {
+    navs.forEach(nav => nav.classList.add('visible'));
+});
 
-### Markdown
-
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
-
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [Basic writing and formatting syntax](https://docs.github.com/en/github/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/njrandom/abyss/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+closeBtn.addEventListener('click', () => {
+    navs.forEach(nav => nav.classList.remove('visible'));
+});
+})</script></body></html>
